@@ -51,7 +51,7 @@ class PhpRedisConnector implements Connector
         $options = array_merge($options, $clusterOptions, Arr::pull($config, 'options', []));
 
         return new PhpRedisClusterConnection($this->createRedisClusterInstance(
-            array_map([$this, 'buildClusterConnectionString'], $config), $options
+            array_map($this->buildClusterConnectionString(...), $config), $options
         ));
     }
 
@@ -85,6 +85,8 @@ class PhpRedisConnector implements Connector
                 );
             }
 
+            $this->establishConnection($client, $config);
+
             if (array_key_exists('max_retries', $config)) {
                 $client->setOption(Redis::OPT_MAX_RETRIES, $config['max_retries']);
             }
@@ -100,8 +102,6 @@ class PhpRedisConnector implements Connector
             if (array_key_exists('backoff_cap', $config)) {
                 $client->setOption(Redis::OPT_BACKOFF_CAP, $config['backoff_cap']);
             }
-
-            $this->establishConnection($client, $config);
 
             if (! empty($config['password'])) {
                 if (isset($config['username']) && $config['username'] !== '' && is_string($config['password'])) {

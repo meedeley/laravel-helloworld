@@ -48,7 +48,6 @@ class AuthManager implements FactoryContract
      * Create a new Auth manager instance.
      *
      * @param  \Illuminate\Contracts\Foundation\Application  $app
-     * @return void
      */
     public function __construct($app)
     {
@@ -67,7 +66,7 @@ class AuthManager implements FactoryContract
     {
         $name = $name ?: $this->getDefaultDriver();
 
-        return $this->guards[$name] ?? $this->guards[$name] = $this->resolve($name);
+        return $this->guards[$name] ??= $this->resolve($name);
     }
 
     /**
