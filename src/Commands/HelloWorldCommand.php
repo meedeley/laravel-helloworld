@@ -13,7 +13,7 @@ class HelloWorldCommand extends Command
     public function handle()
     {
         $name = $this->argument("name") ?? "World";
-        $message = HelloWorld::greet("Nichola");
+        $message = HelloWorld::greet($name);
 
         $this->info($message);
         $this->line("Package version: " . HelloWorld::getVersion());

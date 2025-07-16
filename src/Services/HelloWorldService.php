@@ -13,6 +13,6 @@ class HelloWorldService
 
     public function getVersion(): string
     {
-        return "1.0.0";
+        return "1.0.2";
     }
 }
