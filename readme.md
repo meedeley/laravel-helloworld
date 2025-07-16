@@ -1,4 +1,4 @@
-# Hello World Laravel Package
+# Print Hello World Laravel Package
 
 > A package that does exactly what you think it does — it says **Hello World** (wow, groundbreaking).
 
@@ -17,8 +17,8 @@ composer require meedeley/hello-world
 ```
 
 source for learn :
-https://laravel.com/docs/12.x/packages
-https://chatgpt.com
+- https://laravel.com/docs/12.x/packages
+- https://chatgpt.com
 
 ## How To Use
 ### Artisan Command
