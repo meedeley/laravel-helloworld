@@ -14,6 +14,7 @@ This is a very serious Laravel package designed for extremely critical situation
 
 ```bash
 composer require meedeley/hello-world
+```
 
 source for learn :
 https://laravel.com/docs/12.x/packages
