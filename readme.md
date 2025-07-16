@@ -27,7 +27,7 @@ php artisan hello:world
 
 or
 
-php artisan hello:world [name
+php artisan hello:world [name]
 ```
 
 ### Controller File
