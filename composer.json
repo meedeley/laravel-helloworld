@@ -2,7 +2,7 @@
   "name": "meedeley/hello-world",
   "description": "Just a simple library to generate greetings or messages in Laravel using Artisan command.",
   "type": "library",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "authors": [
     {

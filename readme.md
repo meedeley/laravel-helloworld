@@ -19,3 +19,23 @@ composer require meedeley/hello-world
 source for learn :
 https://laravel.com/docs/12.x/packages
 https://chatgpt.com
+
+## How To Use
+### Artisan Command
+```bash
+php artisan hello:world
+
+or
+
+php artisan hello:world [name
+```
+
+### Controller File
+```
+  use Meedeley\HelloWorld\Facades\HelloWorld;
+
+  HelloWorld::greet("Everyone");
+  HelloWorld::greet("Joko");
+  HelloWorld::greet("Morro");
+
+```
